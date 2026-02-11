@@ -1,0 +1,339 @@
+/* ──────── Alerts View ──────── */
+.alerts-view {
+    display: flex;
+    height: 100%;
+    background: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* ──────── Main Table Area ──────── */
+.alerts-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-right: 1px solid #e0e0e0;
+}
+
+.alerts-table {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ──────── Header Row ──────── */
+.alerts-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 8px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+    background: #fafafa;
+}
+
+/* ──────── Column Widths ──────── */
+.alerts-col-icon {
+    width: 40px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.alerts-col-source {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.alerts-col-cause {
+    flex: 1;
+    min-width: 120px;
+}
+
+.alerts-col-tagid {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.alerts-col-time {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.alerts-col-pin {
+    width: 40px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.alerts-col-ack {
+    width: 80px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* ──────── Data Rows ──────── */
+.alerts-body {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.alerts-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 6px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+.alerts-row:hover {
+    background: #f8f8f8;
+}
+
+.alerts-row.selected {
+    background: #e8f0fe;
+}
+
+/* ──────── Severity Icons ──────── */
+.alert-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ──────── ACK Button ──────── */
+.ack-btn {
+    padding: 4px 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    color: #333;
+}
+
+.ack-btn:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+/* ──────── Bottom Toolbar ──────── */
+.alerts-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-top: 1px solid #e0e0e0;
+    background: #fafafa;
+    flex-shrink: 0;
+}
+
+.alerts-toolbar-left,
+.alerts-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.toolbar-btn:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.ack-all-btn {
+    font-weight: 600;
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.ack-all-btn:hover {
+    background: #444;
+}
+
+/* ──────── Detail Panel ──────── */
+.alerts-detail {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 12px;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+}
+
+.detail-header-icon {
+    font-size: 14px;
+}
+
+/* ──────── Detail Card ──────── */
+.detail-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.detail-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.detail-title {
+    font-size: 13px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.detail-actions-mini {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.detail-description {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.detail-sub-label {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.detail-sub-value {
+    font-size: 12px;
+    color: #333;
+}
+
+/* ──────── Meta Row ──────── */
+.detail-meta-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.detail-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-meta-label {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.detail-meta-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ──────── Detail Buttons ──────── */
+.detail-btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.detail-btn {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.detail-btn:hover {
+    background: #444;
+}
+
+.detail-btn-outline {
+    background: #fff;
+    color: #333;
+}
+
+.detail-btn-outline:hover {
+    background: #f0f0f0;
+}
+
+/* ──────── Pinned Items ──────── */
+.pinned-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.pinned-title {
+    flex: 1;
+    font-size: 12px;
+    color: #333;
+}
+
+.pinned-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.detail-empty {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 40px 16px;
+}

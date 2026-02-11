@@ -1,0 +1,23 @@
+.temp-display {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.temp-display.boxed {
+    padding: 4px 8px;
+    border: 1px solid var(--obc-border);
+    border-radius: 4px;
+    background: var(--obc-surface);
+}
+
+.temp-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--obc-accent);
+}
+
+.temp-unit {
+    font-size: 12px;
+    color: var(--obc-text-secondary);
+}

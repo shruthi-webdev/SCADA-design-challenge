@@ -1,0 +1,24 @@
+.valve {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--obc-text-primary);
+}
+
+.valve-open {
+    color: var(--obc-text-primary);
+}
+
+.valve-closed {
+    color: var(--obc-text-secondary);
+}
+
+.valve-partial {
+    color: var(--obc-accent);
+}
+
+.valve-label {
+    font-size: 11px;
+    color: var(--obc-text-secondary);
+}

@@ -1,0 +1,56 @@
+.control-panel {
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: var(--panel-border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.control-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--obc-border);
+    flex-shrink: 0;
+}
+
+.control-panel-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--obc-text-secondary);
+}
+
+.control-panel-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.control-panel-menu,
+.control-panel-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--obc-text-secondary);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.control-panel-menu:hover,
+.control-panel-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--obc-text-primary);
+}
+
+.control-panel-content {
+    padding: var(--panel-padding);
+    flex: 1;
+    overflow: auto;
+}

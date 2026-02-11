@@ -1,0 +1,48 @@
+.pump {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.pump-icon {
+    position: relative;
+    color: var(--obc-text-primary);
+}
+
+.pump-on .pump-icon {
+    color: var(--obc-accent);
+}
+
+.pump-standby .pump-icon {
+    color: var(--obc-text-secondary);
+}
+
+.pump-indicator {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--obc-accent);
+}
+
+.pump-speed {
+    display: flex;
+    align-items: baseline;
+    gap: 1px;
+}
+
+.pump-speed-value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pump-speed-unit {
+    font-size: 11px;
+    color: var(--obc-text-secondary);
+}
+
+.pump-label {
+    font-size: 11px;
+    color: var(--obc-text-secondary);
+}

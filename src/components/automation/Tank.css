@@ -1,0 +1,76 @@
+.tank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: var(--panel-border-radius);
+    min-width: 100px;
+}
+
+.tank-icon {
+    color: var(--obc-text-primary);
+}
+
+.tank-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tank-level {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.tank-chevron {
+    font-size: 12px;
+    color: var(--obc-text-secondary);
+}
+
+.tank-percentage {
+    display: flex;
+    align-items: baseline;
+}
+
+.tank-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--obc-text-primary);
+}
+
+.tank-percent {
+    font-size: 14px;
+    color: var(--obc-text-secondary);
+}
+
+.tank-capacity {
+    font-size: 12px;
+    color: var(--obc-text-secondary);
+}
+
+.tank-visual {
+    width: 80px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tank-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #87ceeb;
+    transition: height 0.3s ease;
+}
+
+.tank-tag {
+    font-size: 11px;
+    color: var(--obc-text-secondary);
+}
