@@ -1,0 +1,445 @@
+/* ──────── Transfer View ──────── */
+.transfer-view {
+    padding: 16px;
+    min-height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+/* ──────── Transfer Layout Grid ──────── */
+.transfer-layout {
+    display: grid;
+    grid-template-columns: minmax(480px, 1fr) minmax(380px, 1fr);
+    grid-template-rows: auto auto;
+    gap: 24px 32px;
+    align-items: start;
+}
+
+.transfer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.transfer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.transfer-bottom {
+    grid-column: 1 / -1;
+}
+
+/* ──────── Pipe Row (consistent alignment) ──────── */
+.pipe-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+}
+
+.pipe-row>* {
+    flex-shrink: 0;
+}
+
+/* ──────── Group Panels ──────── */
+.transfer-group {
+    border: 1px solid #c8a0d8;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.02);
+    margin: 4px 0;
+}
+
+.transfer-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+}
+
+.transfer-group-expand {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.transfer-group-expand:hover {
+    color: #333;
+}
+
+/* ──────── Group Inner Layout ──────── */
+.group-inner {
+    padding: 8px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-tank-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+/* ──────── Tank Widget ──────── */
+.transfer-tank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    transition: transform 0.1s ease;
+}
+
+.transfer-tank:hover {
+    transform: scale(1.02);
+}
+
+.tank-body {
+    width: 100px;
+    height: 70px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+}
+
+.tank-water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(135, 206, 250, 0.4) 0%, rgba(100, 180, 240, 0.6) 100%);
+    transition: height 0.6s ease;
+}
+
+.tank-info {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    z-index: 2;
+}
+
+.tank-icons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 8px;
+    color: #888;
+}
+
+.tank-icons svg {
+    width: 10px;
+    height: 10px;
+    fill: currentColor;
+}
+
+.tank-percentage {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.tank-pct-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid #0078d4;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.tank-pct-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tank-pct-unit {
+    font-size: 10px;
+    color: #666;
+}
+
+.tank-volume {
+    font-size: 9px;
+    color: #666;
+}
+
+.tank-tag {
+    font-size: 8px;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* ──────── Valve (Transfer) ──────── */
+.t-valve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 1px;
+    transition: opacity 0.15s;
+}
+
+.t-valve:hover {
+    opacity: 0.7;
+}
+
+.t-valve-label {
+    font-size: 8px;
+    color: #666;
+}
+
+/* ──────── Pump (Transfer) ──────── */
+.t-pump {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 1px;
+    transition: opacity 0.15s;
+}
+
+.t-pump:hover {
+    opacity: 0.7;
+}
+
+.t-pump-label {
+    font-size: 8px;
+    color: #666;
+}
+
+/* ──────── Capacity Box ──────── */
+.capacity-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.capacity-value {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 4px 10px;
+    background: #f8f8f8;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ──────── Junction Box ──────── */
+.junction-box {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #c8a0d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #888;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* ──────── Overflow Tank ──────── */
+.overflow-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 80px;
+}
+
+.overflow-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.overflow-tank {
+    width: 60px;
+    height: 80px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+}
+
+.overflow-tank .tank-water {
+    background: linear-gradient(180deg, rgba(135, 206, 250, 0.3) 0%, rgba(100, 180, 240, 0.5) 100%);
+}
+
+.overflow-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+    z-index: 2;
+}
+
+/* ──────── Fuel Leak Indicator ──────── */
+.fuel-leak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 60px;
+}
+
+.fuel-leak-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #666;
+}
+
+.fuel-leak-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #888;
+    background: #f8f8f8;
+}
+
+/* ──────── Data Tags & Values ──────── */
+.data-tag {
+    font-size: 8px;
+    color: #888;
+    white-space: nowrap;
+}
+
+.data-value {
+    font-size: 9px;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0 2px;
+}
+
+/* ──────── Bottom Center layout ──────── */
+.bottom-center {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ──────── Responsive ──────── */
+@media (max-width: 1200px) {
+    .transfer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .transfer-bottom {
+        grid-column: 1;
+    }
+}
+
+/* ══════════════════════════════════════ */
+/*              Dark Theme               */
+/* ══════════════════════════════════════ */
+[data-theme="dark"] .tank-body {
+    background: #2a2a3e;
+    border-color: #4a4a64;
+}
+
+[data-theme="dark"] .tank-water {
+    background: linear-gradient(180deg, rgba(100, 180, 240, 0.2) 0%, rgba(80, 150, 220, 0.4) 100%);
+}
+
+[data-theme="dark"] .tank-pct-value {
+    color: #e0e0e8;
+}
+
+[data-theme="dark"] .tank-volume,
+[data-theme="dark"] .tank-tag,
+[data-theme="dark"] .tank-icons {
+    color: #888;
+}
+
+[data-theme="dark"] .tank-pct-indicator {
+    border-color: #6fa8dc;
+}
+
+[data-theme="dark"] .transfer-group {
+    border-color: #6a5a7a;
+}
+
+[data-theme="dark"] .transfer-group-header {
+    color: #b0b0c0;
+}
+
+[data-theme="dark"] .transfer-group-expand:hover {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .overflow-tank {
+    background: #2a2a3e;
+    border-color: #4a4a64;
+}
+
+[data-theme="dark"] .overflow-label,
+[data-theme="dark"] .fuel-leak-label {
+    color: #b0b0c0;
+}
+
+[data-theme="dark"] .fuel-leak-icon {
+    border-color: #4a4a64;
+    background: #2a2a3e;
+    color: #888;
+}
+
+[data-theme="dark"] .overflow-value {
+    color: #e0e0e8;
+}
+
+[data-theme="dark"] .data-tag {
+    color: #888;
+}
+
+[data-theme="dark"] .data-value {
+    color: #ccc;
+}
+
+[data-theme="dark"] .t-valve-label,
+[data-theme="dark"] .t-pump-label {
+    color: #888;
+}
+
+[data-theme="dark"] .capacity-value {
+    background: #2a2a3e;
+    border-color: #4a4a64;
+    color: #e0e0e8;
+}
+
+[data-theme="dark"] .junction-box {
+    border-color: #6a5a7a;
+    color: #888;
+}

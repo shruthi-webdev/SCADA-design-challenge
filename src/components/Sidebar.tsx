@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 
-export type NavPage = 'dashboard' | 'analytics' | 'devices' | 'ga' | 'water'
+export type NavPage = 'dashboard' | 'analytics' | 'devices' | 'ga' | 'water' | 'transfer'
     | 'ac1' | 'ac2' | 'technical' | 'engine' | 'provision' | 'cardeck'
     | 'battery_aft' | 'battery_fwd' | 'alerts' | 'help' | 'settings';
 
@@ -48,6 +48,12 @@ const GAIcon = () => (
 const WaterIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z" />
+    </svg>
+);
+
+const TransferIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z" />
     </svg>
 );
 
@@ -112,6 +118,7 @@ const mainNavItems: NavItem[] = [
     { id: 'devices', label: 'Devices', icon: <DevicesIcon /> },
     { id: 'ga', label: 'GA', icon: <GAIcon /> },
     { id: 'water', label: 'Water', icon: <WaterIcon /> },
+    { id: 'transfer', label: 'Transfer', icon: <TransferIcon /> },
     { id: 'ac1', label: 'AC', icon: <ACIcon /> },
     { id: 'ac2', label: 'AC', icon: <ACIcon /> },
     { id: 'technical', label: 'Technical rooms', icon: <TechnicalIcon /> },

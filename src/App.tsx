@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import type { NavPage } from './components/Sidebar';
 import WaterSystemView from './views/WaterSystemView';
 import AlertsView from './views/AlertsView';
+import TransferView from './views/TransferView';
 import './App.css';
 
 // Map nav pages to subtitle text shown in the TopBar
@@ -13,6 +14,7 @@ const subtitleMap: Record<NavPage, string> = {
   devices: 'Devices',
   ga: 'GA',
   water: 'Water System',
+  transfer: 'Transfer',
   ac1: 'AC',
   ac2: 'AC',
   technical: 'Technical Rooms',
@@ -39,6 +41,8 @@ function App() {
     switch (activePage) {
       case 'alerts':
         return <AlertsView />;
+      case 'transfer':
+        return <TransferView />;
       default:
         // All other pages show the water system view for now
         return <WaterSystemView />;
