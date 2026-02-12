@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 
-export type NavPage = 'dashboard' | 'analytics' | 'devices' | 'ga' | 'water' | 'transfer'
+export type NavPage = 'dashboard' | 'analytics' | 'devices' | 'table' | 'ga' | 'water' | 'transfer'
     | 'ac1' | 'ac2' | 'technical' | 'engine' | 'provision' | 'cardeck'
     | 'battery_aft' | 'battery_fwd' | 'alerts' | 'help' | 'settings';
 
@@ -36,6 +36,12 @@ const AnalyticsIcon = () => (
 const DevicesIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z" />
+    </svg>
+);
+
+const TableIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z" />
     </svg>
 );
 
@@ -116,6 +122,7 @@ const mainNavItems: NavItem[] = [
     { id: 'dashboard', label: 'Dashboard', icon: <DashboardIcon /> },
     { id: 'analytics', label: 'Analytics', icon: <AnalyticsIcon /> },
     { id: 'devices', label: 'Devices', icon: <DevicesIcon /> },
+    { id: 'table', label: 'Table', icon: <TableIcon /> },
     { id: 'ga', label: 'GA', icon: <GAIcon /> },
     { id: 'water', label: 'Water', icon: <WaterIcon /> },
     { id: 'transfer', label: 'Transfer', icon: <TransferIcon /> },

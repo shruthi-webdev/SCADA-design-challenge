@@ -5,6 +5,9 @@ import type { NavPage } from './components/Sidebar';
 import WaterSystemView from './views/WaterSystemView';
 import AlertsView from './views/AlertsView';
 import TransferView from './views/TransferView';
+import SettingsView from './views/SettingsView';
+import HelpView from './views/HelpView';
+import TableView from './views/TableView';
 import './App.css';
 
 // Map nav pages to subtitle text shown in the TopBar
@@ -12,6 +15,7 @@ const subtitleMap: Record<NavPage, string> = {
   dashboard: 'Dashboard',
   analytics: 'Analytics',
   devices: 'Devices',
+  table: 'Page',
   ga: 'GA',
   water: 'Water System',
   transfer: 'Transfer',
@@ -43,6 +47,12 @@ function App() {
         return <AlertsView />;
       case 'transfer':
         return <TransferView />;
+      case 'table':
+        return <TableView />;
+      case 'settings':
+        return <SettingsView isDark={isDark} onToggleTheme={() => setIsDark(prev => !prev)} />;
+      case 'help':
+        return <HelpView />;
       default:
         // All other pages show the water system view for now
         return <WaterSystemView />;
@@ -56,6 +66,7 @@ function App() {
         subtitle={subtitleMap[activePage]}
         isDark={isDark}
         onToggleTheme={() => setIsDark(prev => !prev)}
+        onNavigateSettings={() => setActivePage('settings')}
       />
       <div className="app-body">
         <Sidebar activePage={activePage} onNavigate={setActivePage} />

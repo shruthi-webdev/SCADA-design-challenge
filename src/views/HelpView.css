@@ -1,0 +1,316 @@
+/* ═══════════════════════════════════════════════════════
+   Help View — FAQ accordions, guides, support
+   ═══════════════════════════════════════════════════════ */
+
+.help-view {
+    height: 100%;
+    overflow-y: auto;
+    background: var(--obc-background);
+    color: var(--obc-text-primary);
+    font-family: 'Noto Sans', sans-serif;
+    padding: 28px 36px 40px;
+}
+
+/* ─── Header / Search ─── */
+.help-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.help-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.help-header p {
+    font-size: 14px;
+    color: var(--obc-text-secondary);
+    margin: 0 0 20px;
+}
+
+.help-search-wrapper {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.help-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--obc-text-secondary);
+    display: flex;
+}
+
+.help-search {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px 0 42px;
+    border: 1px solid var(--obc-border);
+    border-radius: 22px;
+    background: var(--obc-surface);
+    color: var(--obc-text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.help-search:focus {
+    border-color: var(--obc-accent);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.help-search::placeholder {
+    color: var(--obc-text-secondary);
+}
+
+/* ─── Quick-start Cards ─── */
+.help-quickstart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.help-quickstart-card {
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.help-quickstart-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.help-quickstart-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+}
+
+.help-quickstart-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.help-quickstart-card p {
+    font-size: 12px;
+    color: var(--obc-text-secondary);
+    margin: 0;
+}
+
+/* ─── Section Headings ─── */
+.help-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.help-section-title svg {
+    opacity: 0.5;
+}
+
+/* ─── FAQ Accordions ─── */
+.help-faq-list {
+    margin-bottom: 36px;
+}
+
+.help-faq-item {
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.help-faq-item.open {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.help-faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    background: transparent;
+    color: var(--obc-text-primary);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    gap: 12px;
+}
+
+.help-faq-question:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.help-faq-chevron {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    color: var(--obc-text-secondary);
+}
+
+.help-faq-item.open .help-faq-chevron {
+    transform: rotate(180deg);
+}
+
+.help-faq-answer {
+    padding: 0 18px 16px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--obc-text-secondary);
+}
+
+/* ─── Keyboard Shortcuts Table ─── */
+.help-shortcuts-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 36px;
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.help-shortcuts-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--obc-text-secondary);
+    padding: 10px 16px;
+    border-bottom: 2px solid var(--obc-border);
+}
+
+.help-shortcuts-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--obc-border);
+    color: var(--obc-text-primary);
+}
+
+.help-shortcuts-table tr:last-child td {
+    border-bottom: none;
+}
+
+.help-kbd {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--obc-background);
+    border: 1px solid var(--obc-border);
+    border-radius: 4px;
+    font-family: 'Noto Sans', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 1px 0 var(--obc-border);
+}
+
+/* ─── Contact / Support ─── */
+.help-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.help-contact-card {
+    background: var(--obc-surface);
+    border: 1px solid var(--obc-border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: box-shadow 0.2s;
+}
+
+.help-contact-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.help-contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.help-contact-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.help-contact-info p {
+    font-size: 12px;
+    color: var(--obc-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.help-contact-info a {
+    color: var(--obc-accent);
+    text-decoration: none;
+}
+
+.help-contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ─── Footer ─── */
+.help-footer {
+    text-align: center;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--obc-border);
+    color: var(--obc-text-secondary);
+    font-size: 12px;
+}
+
+/* ═══════════ Dark Theme ═══════════ */
+[data-theme="dark"] .help-quickstart-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .help-faq-question:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .help-faq-item.open {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .help-contact-card:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .help-kbd {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
