@@ -7,6 +7,10 @@ mail id: shruthisvenkatesan@outlook.com
           
 College: Kumaraguru college of technology
 
+To run in localhost:
+commands: npm install
+          npm run dev
+
 deployed link: https://scada-design-challenge.vercel.app/
 Access the deployed version of the ui using this link.
 
