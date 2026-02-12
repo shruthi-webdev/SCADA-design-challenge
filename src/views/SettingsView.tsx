@@ -47,7 +47,7 @@ const sectionItems: { id: SettingsSection; label: string; icon: React.ReactNode 
 
 /* ─── Mock data ─── */
 const mockUsers = [
-    { name: 'John Eriksen', email: 'j.eriksen@teknotherm.no', role: 'admin' as const, status: 'Active' },
+    { name: 'shruthi', email: 'shruthisvenkatesan@gmail.com', role: 'admin' as const, status: 'Active' },
     { name: 'Maria Jensen', email: 'm.jensen@teknotherm.no', role: 'operator' as const, status: 'Active' },
     { name: 'Lars Andersen', email: 'l.andersen@teknotherm.no', role: 'operator' as const, status: 'Active' },
     { name: 'Kari Olsen', email: 'k.olsen@teknotherm.no', role: 'viewer' as const, status: 'Inactive' },
@@ -69,19 +69,19 @@ const ProfileSection: React.FC = () => (
             <div className="settings-profile">
                 <div className="settings-avatar">JE</div>
                 <div className="settings-profile-info">
-                    <h3>John Eriksen</h3>
-                    <p>j.eriksen@teknotherm.no</p>
+                    <h3>shruthi</h3>
+                    <p>shruthisvenkatesan@gmail.com</p>
                     <span className="role-badge">System Administrator</span>
                 </div>
             </div>
 
             <div className="settings-form-row">
                 <span className="settings-form-label">Full Name</span>
-                <span className="settings-form-value">John Eriksen</span>
+                <span className="settings-form-value">shruthi</span>
             </div>
             <div className="settings-form-row">
                 <span className="settings-form-label">Email</span>
-                <span className="settings-form-value">j.eriksen@teknotherm.no</span>
+                <span className="settings-form-value">shruthisvenkatesan@gmail.com</span>
             </div>
             <div className="settings-form-row">
                 <span className="settings-form-label">Department</span>
