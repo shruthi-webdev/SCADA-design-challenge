@@ -1,1 +1,8 @@
-A real-time SCADA-based monitoring and control system designed to simulate industrial automation. The system collects live data from sensors, visualizes process parameters through an interactive dashboard, triggers alerts for abnormal conditions, and enables remote control of industrial components. This project demonstrates core SCADA principles including data acquisition, supervision, automation logic, and fault detection.
+SCADA UI/UX- Design challenge
+Name:shruthi V (Individual participant)
+mail id: shruthisvenkatesan@outlook.com
+          shruthi.24cs@kct.ac.in (college mail id)
+College: Kumaraguru college of technology
+deployed link: https://scada-design-challenge.vercel.app/
+Access the deployed version of the ui using this link.
+
